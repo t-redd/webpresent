@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+		<style>
+		img {
+		  width: 50%; 
+		  height: auto;
+		}
+		</style>
+
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	// Start of content
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown> 
+					<textarea data-template>
+						# Paper Picks April 2020
+
+					</textarea>
+				</section>
+				<section>
+					<section data-markdown> 
+					<textarea data-template>
+						## Topic: Solar Influence
+						![Titelbild Shindell](figs/Shindell_etal.png "Shindell" )
+					</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							## Abstract
+							![Abstract Shindell](figs/Shindell_etal_abstract.png "Shindell" )
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							## Top-Down Bottom-Up
+							
+							- Top-Down means influence from the stratosphere
+							- related to much stronger solar variability in UV
+							- spectrally resolved solar flux necessary (SSI)
+							- Bottom-Up means influence from ground (i.e. ocean)
+							- but also from the tropopause
+							- Related to Total Solar Insulation (TSI)
+
+							The paper analyses the role of these two mechanisms
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							## Experiments
+							![Solar Variability](figs/Shindell_Table1.png "Shindell" )
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							## Forcing
+							![Solar Variability](figs/jgrd56138-fig-0001-m.jpg "Shindell" )
+							- in terms of power, only < 1/3 in SW
+							- solar cycle is fixed
+							- 10 cycles
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							## Surface response
+							![Solar Variability](figs/jgrd56138-fig-0002-m.jpg "Shindell" )
+							- globally significant response only for Fixed_all
+							- significant regional response for cycle; lagged by 2 y
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							## Zonal Mean meridional response
+							![Solar Variability](figs/jgrd56138-fig-0003-m.jpg "Shindell" )
+							- stratosphere response smaller than observed
+							- strengthening of polar vortex in SW
+							- small surface response for cycling experiments
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							### Downward Propagation of wind anomalies
+							![Solar Variability](figs/jgrd56138-fig-0004-m.jpg "Shindell" )
+
+							top: var all-SW-LW, bot: fix all-SW-LW
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							## Surface signal for cycling forcing
+							![Solar Variability](figs/jgrd56138-fig-0005-m.jpg "Shindell" )
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							## Surface signal for fixed forcing
+							![Solar Variability](figs/jgrd56138-fig-0006-m.jpg "Shindell" )
+						</textarea>
+					</section>
+
+					<section>Slide 2</section>
+				</section>
+				<section>
+					<section data-audio-src="audio/s4.ogg">Slide 1</section>
+					<section>Slide 2</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				hash: true,        
+				history: true,
+				controls: true,
+        			progress: true,
+        			center: true,
+				// autoSlide: 5000,
+				// advance: 0
+        			audioPrefix: 'audio/',
+        			audioSuffix: '.ogg',
+
+  
+				dependencies: [
+			                { src: 'plugin/audio-slideshow/RecordRTC.js', condition: function( ) { return !!document.body.classList; } },
+					{ src: 'plugin/audio-slideshow/slideshow-recorder.js', condition: function( ) { return !!document.body.classList; } },
+					{ src: 'plugin/audio-slideshow/audio-slideshow.js', condition: function( ) { return !!document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/notes/notes.js', async: true }
+				],
+			        keyboard: {
+					82: function() { Recorder.toggleRecording(); }, // press 'r' to start/stop recording
+					90: function() { Recorder.downloadZip(); }      // press 'z' to download zip containing audio files
+					}
+
+			});
+		</script>
+	</body>
+</html>
