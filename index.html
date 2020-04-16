@@ -153,7 +153,10 @@
 				// advance: 0
         			audioPrefix: 'audio/',
         			audioSuffix: '.ogg',
-
+				chalkboard: {
+					// optionally load pre-recorded chalkboard drawing from file
+					src: "chalkboard.json",
+						},
   
 				dependencies: [
 			                { src: 'plugin/audio-slideshow/RecordRTC.js', condition: function( ) { return !!document.body.classList; } },
@@ -163,11 +166,19 @@
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/highlight/highlight.js' },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/chalkboard/chalkboard.js' },
 					{ src: 'plugin/notes/notes.js', async: true }
 				],
 			        keyboard: {
 					82: function() { Recorder.toggleRecording(); }, // press 'r' to start/stop recording
-					90: function() { Recorder.downloadZip(); }      // press 'z' to download zip containing audio files
+					90: function() { Recorder.downloadZip(); },      // press 'z' to download zip containing audio files
+					67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+	    				66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+	    				46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+	     				8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+	    				68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+	    				88: function() { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
+	    				89: function() { RevealChalkboard.colorPrev() }	// cycle colors backward when 'y' is pressed
 					}
 
 			});
