@@ -125,15 +125,15 @@
 					</section>
 				</section>
         
-        <section>
-	        <pre><code data-trim data-noescape>
-            (def lazy-fib
-              (concat
-                  [0 1]
-                  <mark>((fn rfib [a b]</mark>
-                  (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
-	        </code></pre>
-        </section>
+        			<section>
+	        			<pre><code data-trim data-noescape>
+            					(def lazy-fib
+              					(concat
+                  				[0 1]
+                  				<mark>((fn rfib [a b]</mark>
+                  				(lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
+	        			</code></pre>
+        			</section>
 
 				<section data-markdown data-audio-src="audio/HappyBirthdayOperaPiano.ogg">
 					<textarea data-template>
@@ -142,31 +142,31 @@
 					</textarea data-template>
 				</section>
           
-        <section data-markdown>
-          <textarea data-template>
+        			<section data-markdown>
+          				<textarea data-template>
 							## Zooming
 							![Solar Variability](figs/jgrd56138-fig-0002-m.jpg "Shindell" )
 							- globally significant response only for Fixed_all
 							- significant regional response for cycle; lagged by 2 y
-				  </textarea>
+				  	</textarea>
 				</section>
           
-        <section data-markdown>
-          <textarea data-template>
-							## Math mode
-              Some formula
+        			<section data-markdown>
+          				<textarea data-template>
+						## Math mode
+              					Some formula
             
-              `$$ J(\theta_0,\theta_1) = \sum_{i=0} $$`
-		      </textarea>
+				              `$$ J(\theta_0,\theta_1) = \sum_{i=0} $$`
+		      			</textarea>
 				</section>
     
-        <section data-markdown>
-          <textarea data-template>
-							## Remarks and chalkboard
-							![Solar Variability](figs/jgrd56138-fig-0002-m.jpg "Shindell" )
-							- globally significant response only for Fixed_all
-							- significant regional response for cycle; lagged by 2 y
-				  </textarea>
+   				<section data-markdown>
+          				<textarea data-template>
+						## Remarks and chalkboard
+						![Solar Variability](figs/jgrd56138-fig-0002-m.jpg "Shindell" )
+						- globally significant response only for Fixed_all
+						- significant regional response for cycle; lagged by 2 y
+				  	</textarea>
 				</section>
 
 				<section>
@@ -199,6 +199,9 @@
 				// advance: 0
         			audioPrefix: 'audio/',
         			audioSuffix: '.ogg',
+				math: {
+					mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js'
+						},
 				chalkboard: {
 					// optionally load pre-recorded chalkboard drawing from file
 					src: "chalkboard.json",
