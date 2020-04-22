@@ -75,7 +75,7 @@
 							- open in browser (special options for some browsers)
 						</textarea>
 					</section>
-				</section>
+        </section>
         <section>
 				  <section data-markdown>
 						<textarea data-template>
@@ -102,8 +102,8 @@
 							## Lists
 									## A Lists
 									1. One
-									2. Three
-									3. Two forgotten
+									3. Three
+									2. Two forgotten
 							1. One
 							2. Three
 							3. Two forgotten
@@ -124,6 +124,16 @@
 						<p class="fragment highlight-blue">highlight-blue</p>
 					</section>
 				</section>
+        
+        <section>
+	        <pre><code data-trim data-noescape>
+            (def lazy-fib
+              (concat
+                  [0 1]
+                  <mark>((fn rfib [a b]</mark>
+                  (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
+	        </code></pre>
+        </section>
 
 				<section data-markdown data-audio-src="audio/HappyBirthdayOperaPiano.ogg">
 					<textarea data-template>
@@ -131,11 +141,23 @@
 							<section data-markdown data-audio-src="audio/HappyBirthdayOperaPiano.ogg">
 					</textarea data-template>
 				</section>
+          
+        <section data-markdown>
+          <textarea data-template>
+							## Zooming
+							![Solar Variability](figs/jgrd56138-fig-0002-m.jpg "Shindell" )
+							- globally significant response only for Fixed_all
+							- significant regional response for cycle; lagged by 2 y
+				  </textarea>
+				</section>
 
-				<section>
-					<textarea data-template>
-					# Happy Birthday, dear Roland
-					</textarea data-template>
+        <section data-markdown>
+          <textarea data-template>
+							## Remarks and chalkboard
+							![Solar Variability](figs/jgrd56138-fig-0002-m.jpg "Shindell" )
+							- globally significant response only for Fixed_all
+							- significant regional response for cycle; lagged by 2 y
+				  </textarea>
 				</section>
 
 				<section>
